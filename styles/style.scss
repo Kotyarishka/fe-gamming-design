@@ -311,6 +311,10 @@ section .container {
     }
 }
 
+section.hero {
+    overflow-y: hidden;
+}
+
 section.hero > .container {
     position: relative;
     height: 100vh;
@@ -393,18 +397,17 @@ section.hero > .container {
     top: 0;
     right: 0;
     img {
-        aspect-ratio: 578px / 761px;
         height: auto;
         max-height: 820px;
-
-        @include md {
-            right: 5%;
-        }
     }
 
     @include lt-md {
         display: none;
-    }    
+    }
+
+    @include md {
+        right: -20%;
+    }
 }
 
 section.trending > .container {
