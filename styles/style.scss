@@ -671,14 +671,6 @@ section.projects > .container {
         margin: 0 auto;
         margin-top: 5rem;
 
-
-        @include xs {
-            position: relative;
-            width: 200%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
         .project {
             flex-grow: 1;
             img {
@@ -696,15 +688,25 @@ section.projects > .container {
                 }
             }
 
-
             &:nth-child(4) {
                 flex-grow: 0;
             }
             &:nth-child(5) {
                 flex-grow: 0;
             }
+        }
 
-            
+        @include xs {
+            justify-content: center;
+
+            .project {
+                &:nth-child(4) {
+                    flex-grow: 1;
+                }
+                &:nth-child(5) {
+                    flex-grow: 1;
+                }
+            }
         }
     }
 }
